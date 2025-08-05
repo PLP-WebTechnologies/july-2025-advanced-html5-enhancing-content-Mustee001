@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Hostel Bookings</title>
+	<meta name="description" content="Hostel booking form and info page with media, lists, tables, and validation using HTML5.">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    
+    <div class="toggle-container">
+        <label class="switch">
+    <input type="checkbox" id="modeToggle">
+    <span class="slider round"></span>
+  </label>
+        <span class="mode-label">Dark Mode</span>
+    </div> 
+    
+		<h1>Hostel Booking Portal</h1>
+		<p>Reserve your space with ease!</p>
+	</header>
+
+	<main> 
+	   <!-- FEATURES SECTION -->
+		<section id="features" aria-label="Features section">
+		    <h2>Features</h2> 
+		    <ul>
+		        <li>24/7 Electricity</li>
+		        <li>Wi-Fi Access</li>
+		        <li>Study rooms</li>
+		        <li>Shared kitchens</li>
+		        <li>Security &amp; CCTV</li>
+		    </ul> 
+		</section> 
+		
+		<!-- ROOMS SECTION -->
+		<section id="rooms" aria-label="Rooms list">
+            <table border="1">
+                <caption><strong>Rooms Available</strong></caption>
+                <thead>
+                    <tr>
+                        <th>Room Type</th>
+                        <th>Capacity</th>
+                        <th>Price/Semester</th>
+                        <th>Availability</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Single Room</td>
+                        <td>1</td>
+                        <td>₦120,000</td>
+                        <td>Available</td>
+                    </tr>
+                    <tr>
+                        <td>Double Room</td>
+                        <td>2</td>
+                        <td>₦100,000</td>
+                        <td>Limited</td>
+                    </tr>
+                    <tr>
+                        <td>Quad Room</td>
+                        <td>4</td>
+                        <td>₦80,000</td>
+                        <td>Full</td>
+                    </tr>
+                </tbody>
+            </table>
+		</section> 
+		
+        <!-- MEDIA SECTION -->
+        <section id="media-showcase" aria-labelledby="media-heading">
+            <h2 id="media-heading">Hostel Media Showcase</h2>
+
+            <!-- IMAGE SECTION -->
+            <h3>📸 Exterior Images</h3> 
+            
+            <img src="media/main.jpg" alt="Image of hostel main building" width="400" height="250" loading="lazy">
+            
+            <h3>📸 Interior Images</h3>
+            <div class="gallery">
+                <img src="media/image1.jpg" alt="Standard hostel room" width="300" height="200" loading="lazy">
+                <img src="media/image2.jpg" alt="Interior design" width="300" height="200" loading="lazy">
+                <img src="media/image3.jpg" alt="Standard double room" width="300" height="200" loading="lazy">
+            </div>
+
+            <!-- VIDEO SECTION -->
+            <h3>🎥 Exterior Video</h3>
+            <video controls width="400" muted loop loading="lazy">
+                <source src="media/vid.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            
+            <h3>🎥 Interior Videos</h3>
+            <video controls width="400" muted loop loading="lazy">
+                <source src="media/vid1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video controls width="400" muted loop loading="lazy">
+                <source src="media/vid2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video controls width="400" muted loop loading="lazy">
+                <source src="media/vid3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <!-- AUDIO SECTION -->
+            <h3>🎵 Background Music</h3>
+            <audio controls autoplay loop preload="auto">
+                <source src="media/music1.mp3" type="audio/mpeg">
+                Your browser does not support the audio tag.
+            </audio>
+
+            <h4>Optional Track</h4>
+            <audio controls preload="none">
+                <source src="media/music2.mp3" type="audio/mpeg">
+                Your browser does not support the audio tag.
+            </audio>
+        </section>
+	</main> 
+	
+    <section id="booking-form" aria-labelledby="form-heading">
+        <h2 id="form-heading">📝 Book a Room</h2>
+        <form action="#" method="POST" autocomplete="on">
+            
+            <fieldset>
+                <legend>Personal Information</legend>
+    
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" placeholder="e.g. Musa Mustapha" required>
+    
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+    
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{11}" placeholder="e.g. 08012345678" required>
+    
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+            </fieldset>
+    
+            <fieldset>
+                <legend>Room Preferences</legend>
+    
+                <label for="roomType">Room Type:</label>
+                <select id="roomType" name="roomType" required>
+                    <option value="">-- Select Room Type --</option>
+                    <option value="single">Single Room</option>
+                    <option value="double">Double Room</option>
+                    <option value="quad">Quad Room</option>
+                </select>
+    
+                <p>Preferred Floor:</p>
+                <label><input type="radio" name="floor" value="ground" required> Ground Floor</label>
+                <label><input type="radio" name="floor" value="first"> First Floor</label>
+                <label><input type="radio" name="floor" value="second"> Second Floor</label>
+    
+                <p>Extra Features:</p>
+                <label><input type="checkbox" name="wifi" checked disabled> Free Wi-Fi (Included)</label>
+                <label><input type="checkbox" name="studyDesk"> Study Desk</label>
+                <label><input type="checkbox" name="kitchen"> Shared Kitchen Access</label>
+            </fieldset>
+    
+            <fieldset>
+                <legend>Other Details</legend>
+    
+                <label for="checkin">Check-in Date:</label>
+                <input type="date" id="checkin" name="checkin" required>
+    
+                <label for="stayLength">Length of Stay (months):</label>
+                <input type="number" id="stayLength" name="stayLength" min="1" max="12" required>
+    
+                <label for="referral">Referral Code:</label>
+                <input type="text" id="referral" name="referral" value="PLP2025" readonly>
+    
+                <label for="comments">Additional Comments:</label>
+                <textarea id="comments" name="comments" rows="4" placeholder="Any other information you'd like to provide..."></textarea>
+            </fieldset>
+    
+            <button type="submit">Submit Booking</button>
+        </form>
+    </section>
+    	
+    <script>
+        const toggle = document.getElementById('modeToggle');
+      toggle.addEventListener('change', () => {
+        document.body.classList.toggle('dark-mode');
+      });
+    </script>
+	
+	<footer>
+		<p>&copy; 2025 Hostel Booking Services</p>
+	</footer>
+
+</body>
+</html>
