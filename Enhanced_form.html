@@ -7,17 +7,16 @@
 	<meta name="description" content="Hostel booking form and info page with media, lists, tables, and validation using HTML5.">
 	<link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body> 
+    <!-- Dark mode toggle -->
+    <input type="checkbox" id="modeToggle" class="hidden-toggle" aria-label="Toggle Dark Mode">
 
-<header>
-    
-    <div class="toggle-container">
-        <label class="switch">
-    <input type="checkbox" id="modeToggle">
-    <span class="slider round"></span>
-  </label>
+
+    <header>
+        <label for="modeToggle" class="switch">
+          <span class="slider round"></span>
+        </label>
         <span class="mode-label">Dark Mode</span>
-    </div> 
     
 		<h1>Hostel Booking Portal</h1>
 		<p>Reserve your space with ease!</p>
@@ -81,6 +80,7 @@
             <img src="media/main.jpg" alt="Image of hostel main building" width="400" height="250" loading="lazy">
             
             <h3>📸 Interior Images</h3>
+            
             <div class="gallery">
                 <img src="media/image1.jpg" alt="Standard hostel room" width="300" height="200" loading="lazy">
                 <img src="media/image2.jpg" alt="Interior design" width="300" height="200" loading="lazy">
@@ -89,6 +89,7 @@
 
             <!-- VIDEO SECTION -->
             <h3>🎥 Exterior Video</h3>
+            
             <video controls width="400" muted loop loading="lazy">
                 <source src="media/vid.mp4" type="video/mp4">
                 Your browser does not support the video tag.
@@ -184,14 +185,7 @@
             <button type="submit">Submit Booking</button>
         </form>
     </section>
-    	
-    <script>
-        const toggle = document.getElementById('modeToggle');
-      toggle.addEventListener('change', () => {
-        document.body.classList.toggle('dark-mode');
-      });
-    </script>
-	
+    
 	<footer>
 		<p>&copy; 2025 Hostel Booking Services</p>
 	</footer>
